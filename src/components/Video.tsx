@@ -4,8 +4,8 @@ import { FC } from 'react';
 import { Button } from './Button';
 import { CardToDownload } from './CardToDownload';
 
-import '@vime/core/themes/default.css'
 import { gql, useQuery } from '@apollo/client';
+import '@vime/core/themes/default.css';
 
 const GET_LESSON_BY_SLUG_QUERY = gql` 
   query GetLessonBySlug ($slug: String) {
@@ -44,7 +44,7 @@ export const Video: FC<VideoProps> = ({ lessonSlug }) => {
     variables: {
       slug: lessonSlug
     }
-  })
+  })  
 
   if (!data) {
     return (
